@@ -2,6 +2,8 @@ form {
     border: 1px solid #545454;
     border-radius: 3px;
     padding: 40px;
+    font-size: 24px;
+    background-color: rgb(151, 196, 197);
 }
 
 input {
@@ -9,4 +11,8 @@ input {
     width: 100%;
     line-height: 16px;
     margin: 10px 0;
+}
+
+.button {
+    background-color: rgb(199, 198, 198);
 }
