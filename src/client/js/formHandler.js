@@ -3,7 +3,7 @@ import { checkLink } from './nameChecker'
 function handleSubmit(event) {
     event.preventDefault()
 
-    // check what text was put into the form field
+    // check that a link was put into the form field
     let formText = document.getElementById('linkFromUser').value
     checkLink(formText)
 
