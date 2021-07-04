@@ -3,3 +3,16 @@ header {
     justify-content: space-between;
     padding: 10px 40px;
 }
+
+.nav_menu {
+    background-color: rgb(199, 198, 198);
+    border: 1px solid #545454;
+    border-radius: 3px;
+}
+
+.nav_menu li {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 20px;
+}
