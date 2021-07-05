@@ -8,4 +8,10 @@ import { handleSubmit } from './js/formHandler'
 
 export { checkLink, handleSubmit }
 
-console.log("CHANGE!!");
+const sectionItems = document.querySelectorAll("section");
+
+for (const menuItem of sectionItems) {
+    menuItem.addEventListener("click" , ( ) => {
+        menuItem.classList.toggle("collapsible");
+    });
+}
