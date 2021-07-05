@@ -4,9 +4,10 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 import { checkLink } from './js/nameChecker'
-import { handleSubmit } from './js/formHandler'
+import { handleSubmitLink } from './js/formHandler'
+import { handleSubmitText } from './js/formHandler'
 
-export { checkLink, handleSubmit }
+export { checkLink, handleSubmitLink, handleSubmitText }
 
 const sectionItems = document.querySelectorAll("section");
 const menuItemLink = document.getElementById("toLink");
@@ -15,7 +16,8 @@ const sectionLink = document.getElementById("sectionLink");
 const sectionText = document.getElementById("sectionText");
 
 for (const sectionItem of sectionItems) {
-    sectionItem.addEventListener("click" , ( ) => {
+    const sectionName = sectionItem.children[0];
+    sectionName.addEventListener("click" , ( ) => {
         sectionItem.classList.toggle("collapsible");
     });
 }
