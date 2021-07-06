@@ -18,7 +18,7 @@ input {
     background-color: #d0d7df;
 }
 
-#validationMsg {
+.msg {
     color: red;
     font-size: 16px;
 }
@@ -29,6 +29,7 @@ h2 {
     font-size: 24px;
     cursor: pointer;
     line-height: 40px;
+    padding-left: 5px;
 }
 
 section.collapsible .inputForm {

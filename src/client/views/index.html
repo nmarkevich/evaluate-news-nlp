@@ -29,7 +29,7 @@
                 <form class="inputForm" action="form-handler" onsubmit="return Client.handleSubmitLink(event)">
                     <p>Evaluate an article or a blog with Natural Language Processing</p>
                     <input id="linkFromUser" type="text" name="input" value="" placeholder="Put a link here">
-                    <p id="validationMsg"></p>
+                    <p id="LinkValidationMsg" class="msg"></p>
                     <input class="button" type="submit" name="" value="Submit Link" onclick="return Client.handleSubmitLink(event)">
                 </form>
             </section>
@@ -38,7 +38,7 @@
                     <form class="inputForm" action="form-handler" onsubmit="return Client.handleSubmitText(event)">
                         <p>Evaluate a Text with Natural Language Processing</p>
                         <input id="textFromUser" type="text" name="input" value="" placeholder="Put a text here">
-                        <p id="validationMsg"></p>
+                        <p id="textValidationMsg" class="msg"></p>
                         <input class="button" type="submit" name="" value="Submit Text" onclick="return Client.handleSubmitText(event)">
                     </form>
             </section>

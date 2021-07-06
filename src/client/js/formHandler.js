@@ -1,4 +1,5 @@
 import { checkLink } from './inputChecker'
+import { checkText } from './inputChecker'
 
 function handleSubmitLink(event) {
     event.preventDefault()
@@ -7,7 +8,7 @@ function handleSubmitLink(event) {
     let formText = document.getElementById('linkFromUser').value
     checkLink(formText)
 
-    console.log("::: Form Submitted :::")
+    console.log("::: Link Form Submitted :::")
     // fetch('http://localhost:8080/test')
     //     .then(res => res.json())
     //     .then(function (res) {
@@ -19,15 +20,11 @@ function handleSubmitText(event) {
     event.preventDefault()
 
     // check that a link was put into the form field
-    let formText = document.getElementById('linkFromUser').value
-    checkLink(formText)
+    let formText = document.getElementById('textFromUser').value
+    checkText(formText)
 
-    console.log("::: Form Submitted :::")
-    // fetch('http://localhost:8080/test')
-    //     .then(res => res.json())
-    //     .then(function (res) {
-    //         document.getElementById('results').innerHTML = res.message
-    //     })
+    console.log("::: Text Form Submitted :::")
+
 }
 
 export { handleSubmitLink }
