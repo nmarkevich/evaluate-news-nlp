@@ -1,6 +1,6 @@
-import { checkLink } from './nameChecker'
+import { checkLink } from './inputChecker'
 
-function handleSubmit(event) {
+function handleSubmitLink(event) {
     event.preventDefault()
 
     // check that a link was put into the form field
@@ -15,4 +15,20 @@ function handleSubmit(event) {
     //     })
 }
 
-export { handleSubmit }
+function handleSubmitText(event) {
+    event.preventDefault()
+
+    // check that a link was put into the form field
+    let formText = document.getElementById('linkFromUser').value
+    checkLink(formText)
+
+    console.log("::: Form Submitted :::")
+    // fetch('http://localhost:8080/test')
+    //     .then(res => res.json())
+    //     .then(function (res) {
+    //         document.getElementById('results').innerHTML = res.message
+    //     })
+}
+
+export { handleSubmitLink }
+export { handleSubmitText }
