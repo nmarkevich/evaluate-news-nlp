@@ -12,7 +12,6 @@ function checkLink(inputText) {
         validationText.style.visibility = "visible";
     } else if (inputText.match(regex)) {
         validationText.style.visibility = "hidden";
-        alert("Successful match");
     } else {
         validationText.innerHTML = "The link is incorrect. Put the correct link";
         validationField.focus();

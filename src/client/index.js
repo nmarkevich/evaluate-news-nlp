@@ -9,6 +9,8 @@ import { handleSubmitText } from './js/formHandler'
 
 export { checkLink, handleSubmitLink, handleSubmitText }
 
+/* Global Variables */
+
 const sectionItems = document.querySelectorAll("section");
 const menuItemLink = document.getElementById("toLink");
 const menuItemText = document.getElementById("toText");

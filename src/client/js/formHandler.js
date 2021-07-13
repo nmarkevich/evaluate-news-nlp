@@ -5,15 +5,14 @@ function handleSubmitLink(event) {
     event.preventDefault()
 
     // check that a link was put into the form field
-    let formText = document.getElementById('linkFromUser').value
-    checkLink(formText)
+    let formLink = document.getElementById('linkFromUser').value
+    checkLink(formLink)
 
     console.log("::: Link Form Submitted :::")
-    // fetch('http://localhost:8080/test')
-    //     .then(res => res.json())
-    //     .then(function (res) {
-    //         document.getElementById('results').innerHTML = res.message
-    //     })
+    getData()
+    .then(function(data) {
+        document.getElementById('results').innerHTML = data.agreement;
+    });
 }
 
 function handleSubmitText(event) {
@@ -25,6 +24,19 @@ function handleSubmitText(event) {
 
     console.log("::: Text Form Submitted :::")
 
+}
+
+//Get request to receive API call result from the server
+const getData = async () => {
+    const res = await fetch ('/nlp');
+
+    try {
+        const data = await res.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.log("error", console.error);
+    }
 }
 
 export { handleSubmitLink }
