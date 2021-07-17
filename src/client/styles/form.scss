@@ -7,6 +7,14 @@
     display: none;
 }
 
+.outputForm {
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 24px;
+    background-color: #b0ddd8;
+}
+
 input {
     padding: 5px 20px;
     width: 100%;
@@ -34,4 +42,8 @@ h2 {
 
 section.collapsible .inputForm {
     display: block;
+}
+
+strong {
+    font-weight: 700;
 }

@@ -11,7 +11,7 @@ function handleSubmitLink(event) {
     console.log("::: Link Form Submitted :::")
     getData()
     .then(function(data) {
-        document.getElementById('results').innerHTML = data.agreement;
+        document.getElementById('results').innerHTML = `Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony}`;
     });
 }
 
