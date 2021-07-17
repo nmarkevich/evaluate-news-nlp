@@ -30,7 +30,7 @@
                     <p>Evaluate an article or a blog with Natural Language Processing</p>
                     <input id="linkFromUser" type="text" name="input" value="" placeholder="Put a link here">
                     <p id="LinkValidationMsg" class="msg"></p>
-                    <input class="button" type="submit" name="" value="Submit Link" onclick="return Client.handleSubmitLink(event)">
+                    <input class="button" type="submit" name="" value="Submit Link" onclick="return Client.handleSubmitLink(event)" onsubmit="return handleSubmitLink(event)">
                 </form>
             </section>
             <section id="sectionText">

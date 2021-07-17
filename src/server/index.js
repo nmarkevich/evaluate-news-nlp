@@ -3,11 +3,13 @@ const express = require('express')
 var formData = require('form-data')
 const fetch = require('node-fetch')
 const mockAPIResponse = require('./mockAPI.js')
+const cors = require ('cors')
 
 var bodyParser = require('body-parser')
 const { response } = require('express')
 
 const app = express()
+app.use(cors())
 
 app.use(express.static('dist'))
 
@@ -19,8 +21,8 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
+app.listen(8081, function () {
+    console.log('Example app listening on port 8081!')
 })
 
 //app.get('/NLP', mockAPIResponse.AnalyseData);

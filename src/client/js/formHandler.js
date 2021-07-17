@@ -28,7 +28,7 @@ function handleSubmitText(event) {
 
 //Get request to receive API call result from the server
 const getData = async () => {
-    const res = await fetch ('/nlp');
+    const res = await fetch ('http://localhost:8081/nlp');
 
     try {
         const data = await res.json();
