@@ -1,14 +1,12 @@
 var formData = require('form-data')
 const fetch = require('node-fetch')
-
-/* Global Variables */
-const baseURL = "https://api.meaningcloud.com/sentiment-2.1";
-const apiKey = "ca77b127562a30ed96bbd40241258956";
+const dotenv = require('dotenv')
+dotenv.config()
 
 module.exports = {
     AnalyseDataLink : async function (req, res) {
         const form = new formData();
-        form.append("key", "ca77b127562a30ed96bbd40241258956");
+        form.append("key", process.env.API_KEY);
         form.append("url", req.params.userLink);
         form.append("lang", "en");
 
