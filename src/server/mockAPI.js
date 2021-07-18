@@ -9,10 +9,9 @@ let textFromUser;
 
 module.exports = {
     AnalyseData : async function (req, res) {
-        
         const form = new formData();
-        form.append("key", apiKey);
-        form.append("url", "https://www.verywellmind.com/what-is-positive-thinking-2794772");
+        form.append("key", "ca77b127562a30ed96bbd40241258956");
+        form.append("url", req.params.userLink);
         form.append("lang", "en");
 
         const requestOptions = {
@@ -21,14 +20,10 @@ module.exports = {
             redirect: 'follow'
         };
 
-        const response = await fetch (baseURL, requestOptions)
-        .then(response => ({
-            status: response.status,
-            body: response.json()
-        }))
-        .then(({ status, body }) => {
-            console.log(status, body);
-        })
-        .catch(error => console.log('error happend here', error));
+        const fetch_response = await fetch ("https://api.meaningcloud.com/sentiment-2.1", requestOptions);
+        const json = await fetch_response.json();
+        console.log(json);
+        console.log(req.params.userLink);
+        res.json(json);
     }
 }
