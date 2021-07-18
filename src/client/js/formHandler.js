@@ -9,7 +9,7 @@ function handleSubmitLink(event) {
     checkLink(formLink)
 
     console.log("::: Link Form Submitted :::")
-    getData()
+    getData(formLink)
     .then(function(data) {
         document.getElementById('results').innerHTML = `Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony}`;
     });
@@ -27,8 +27,9 @@ function handleSubmitText(event) {
 }
 
 //Get request to receive API call result from the server
-const getData = async () => {
-    const res = await fetch ('http://localhost:8081/nlp');
+const getData = async (fl) => {
+    const urlEncoded = encodeURIComponent(fl);
+    const res = await fetch (`http://localhost:8081/nlpLink/${urlEncoded}`);
 
     try {
         const data = await res.json();
