@@ -60,3 +60,5 @@ const getDataForText = async (tx) => {
 
 export { handleSubmitLink }
 export { handleSubmitText }
+export { getDataForLink }
+export { getDataForText }
