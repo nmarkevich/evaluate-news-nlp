@@ -26,6 +26,6 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
-app.get('/nlpLink/:userLink', mockAPIResponse.AnalyseDataLink);
+app.get('/nlpLink/:userLink', mockAPIResponse.analyseDataLink);
 
-app.get('/nlpText/:userText', mockAPIResponse.AnalyseDataText);
+app.get('/nlpText/:userText', mockAPIResponse.analyseDataText);

@@ -4,7 +4,7 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 module.exports = {
-    AnalyseDataLink : async function (req, res) {
+    analyseDataLink : async function (req, res) {
         const form = new formData();
         form.append("key", process.env.API_KEY);
         form.append("url", req.params.userLink);
@@ -22,7 +22,8 @@ module.exports = {
         console.log(req.params.userLink);
         res.json(json);
     },
-    AnalyseDataText : async function (req, res) {
+
+    analyseDataText : async function (req, res) {
         const form = new formData();
         form.append("key", "ca77b127562a30ed96bbd40241258956");
         form.append("txt", req.params.userText);
