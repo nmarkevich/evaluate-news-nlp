@@ -10,13 +10,16 @@ function checkLink(inputText) {
         validationField.focus();
         validationField.style.borderColor = "red";
         validationText.style.visibility = "visible";
+        return false;
     } else if (inputText.match(regex)) {
         validationText.style.visibility = "hidden";
+        return true;
     } else {
         validationText.innerHTML = "The link is incorrect. Put the correct link";
         validationField.focus();
         validationField.style.borderColor = "red";
         validationText.style.visibility = "visible";
+        return false;
     }
 }
 
