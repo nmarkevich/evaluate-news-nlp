@@ -13,6 +13,7 @@ function checkLink(inputText) {
         return false;
     } else if (inputText.match(regex)) {
         validationText.style.visibility = "hidden";
+        validationField.style.borderColor = "black";
         return true;
     } else {
         validationText.innerHTML = "The link is incorrect. Put the correct link";
@@ -36,6 +37,7 @@ function checkText(inputText) {
         return false;
     } else {
         validationText.style.visibility = "hidden";
+        validationField.style.borderColor = "black";
         return true;
     }
 }
