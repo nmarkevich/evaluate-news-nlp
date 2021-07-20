@@ -33,8 +33,10 @@ function checkText(inputText) {
         validationField.focus();
         validationField.style.borderColor = "red";
         validationText.style.visibility = "visible";
+        return false;
     } else {
-        alert("TEXT!");
+        validationText.style.visibility = "hidden";
+        return true;
     }
 }
 
