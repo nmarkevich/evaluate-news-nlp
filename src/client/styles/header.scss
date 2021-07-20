@@ -1,7 +1,7 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 40px;
+    padding: 30px 40px;
 }
 
 .nav_menu {
@@ -15,4 +15,12 @@ header {
     flex-direction: column;
     padding: 5px;
     font-size: 20px;
+}
+
+#logo {
+    padding: 20px;
+    font-size: 24px;
+    background-color: #b0ddd8;
+    border: 1px solid #545454;
+    border-radius: 3px;
 }
