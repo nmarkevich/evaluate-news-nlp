@@ -10,7 +10,9 @@ Initial code from Udacity team - [GitHub](https://github.com/udacity/fend/tree/r
 The project implemented by [Natallia Markevich](https://github.com/nmarkevich).
 
 ## Installation
-- Run 'npm install' command to install npm and all dependencies.
+- Run 'npm install' command to install npm and all dependencies.  
+- Create '.env' file in the root directory.  
+- Add 'API_KEY=' parameter with you API key into '.env' file. To get the key register [here](https://www.meaningcloud.com/developer/create-account)
 ### Production environment
 - Run 'npm run build-prod' to make build the app.
 - Run 'npm run start' to run the server.
