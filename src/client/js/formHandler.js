@@ -5,26 +5,34 @@ function handleSubmitLink(event) {
     event.preventDefault()
 
     // check that a link was put into the form field
-    let formLink = document.getElementById('linkFromUser').value
-    checkLink(formLink)
+    let formLink = document.getElementById('linkFromUser').value;
     console.log("::: Link Form Submitted :::")
-    getDataForLink(formLink)
-    .then(function(data) {
-        document.getElementById('results').innerHTML = `Link: ${formLink} <br> Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony}`;
-    });
+    const validationResult = checkLink(formLink);
+    if (validationResult) {
+        getDataForLink(formLink)
+        .then(function(data) {
+            document.getElementById('results').innerHTML = `Link: ${formLink} <br> Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony}`;
+        });
+    } else {
+        document.getElementById('results').innerHTML = "";
+    }
 }
 
 function handleSubmitText(event) {
     event.preventDefault()
 
     // check that a text was put into the form field
-    let formText = document.getElementById('textFromUser').value
-    checkText(formText)
+    let formText = document.getElementById('textFromUser').value;
     console.log("::: Text Form Submitted :::")
-    getDataForText(formText)
-    .then(function(data) {
-        document.getElementById('results').innerHTML = `Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony} <br> Text: ${formText}`;
-    });
+    const validationResult = checkText(formText);
+    if(validationResult) {
+        getDataForText(formText)
+        .then(function(data) {
+            document.getElementById('results').innerHTML = `Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony} <br> Text: ${formText}`;
+        });
+    } else {
+        document.getElementById('results').innerHTML = "";
+    }
 }
 
 //Get request to receive API call result from the server - Link
