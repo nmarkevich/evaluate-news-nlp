@@ -7,7 +7,6 @@ function handleSubmitLink(event) {
     // check that a link was put into the form field
     let formLink = document.getElementById('linkFromUser').value
     checkLink(formLink)
-
     console.log("::: Link Form Submitted :::")
     getDataForLink(formLink)
     .then(function(data) {
@@ -18,12 +17,10 @@ function handleSubmitLink(event) {
 function handleSubmitText(event) {
     event.preventDefault()
 
-    // check that a link was put into the form field
+    // check that a text was put into the form field
     let formText = document.getElementById('textFromUser').value
     checkText(formText)
-
     console.log("::: Text Form Submitted :::")
-
     getDataForText(formText)
     .then(function(data) {
         document.getElementById('results').innerHTML = `Agreement: ${data.agreement} <br> Subjectivity: ${data.subjectivity} <br> Irony: ${data.irony} <br> Text: ${formText}`;

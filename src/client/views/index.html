@@ -26,7 +26,7 @@
         <main>
             <section id="sectionLink">
                 <h2>Evaluate an article</h2>
-                <form class="inputForm" action="form-handler" onsubmit="return Client.handleSubmitLink(event)">
+                <form class="inputForm" onsubmit="return Client.handleSubmitLink(event)">
                     <p>Evaluate an article or a blog with Natural Language Processing</p>
                     <input id="linkFromUser" type="text" name="input" value="" placeholder="Put a link here">
                     <p id="LinkValidationMsg" class="msg"></p>
@@ -35,7 +35,7 @@
             </section>
             <section id="sectionText">
                 <h2>Evaluate a text</h2>
-                    <form class="inputForm" action="form-handler" onsubmit="return Client.handleSubmitText(event)">
+                    <form class="inputForm" onsubmit="return Client.handleSubmitText(event)">
                         <p>Evaluate a Text with Natural Language Processing</p>
                         <input id="textFromUser" type="text" name="input" value="" placeholder="Put a text here">
                         <p id="textValidationMsg" class="msg"></p>

@@ -18,8 +18,6 @@ module.exports = {
 
         const fetch_response = await fetch ("https://api.meaningcloud.com/sentiment-2.1", requestOptions);
         const json = await fetch_response.json();
-        console.log(json);
-        console.log(req.params.userLink);
         res.json(json);
     },
 
@@ -37,8 +35,6 @@ module.exports = {
 
         const fetch_response = await fetch ("https://api.meaningcloud.com/sentiment-2.1", requestOptions);
         const json = await fetch_response.json();
-        console.log(json);
-        console.log(req.params.userText);
         res.json(json);
     }
 }
